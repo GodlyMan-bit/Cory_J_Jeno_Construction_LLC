@@ -1,0 +1,284 @@
+@font-face {
+    font-family: Merriweather;
+    src: url(fonts/Merriweather-Light.ttf);
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Merriweather;
+}
+
+.page {
+    position: relative;
+    background: whitesmoke;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    color: white;
+    background: transparent;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    transition: 0.3s ease-in-out;
+    height: 90px;
+}
+
+.scrolled {
+    height: 80px;
+    background: rgba(22, 22, 22, .9);
+    transition: 0.3s ease-in-out;
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+/* Navigation Styles */
+.nav {
+    width: 40%;
+}
+
+.nav-list {
+    list-style: none;
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Navigation Styles */
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.nav-link a:hover,
+.nav-link a.active {
+    border-bottom: 2px solid white; /* Change underline color on hover and active state */
+    transition: 0.3s;
+}
+
+.active {
+    border-bottom: 2px solid red;
+}
+
+/* Content Styles */
+.content {
+    background: black;
+    min-height: 800px;
+    position: relative;
+    top: -90px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    color: white;
+    font-size: 35px;
+    margin: 10%;
+    text-align: left;
+    /* Align text to left */
+}
+
+/* About Section */
+.about-section {
+    background: #333;
+    color: white;
+    padding: 50px 40px;
+    text-align: left;
+    /* Align text to left */
+    margin-top: -90px;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.image1 img {
+    padding: 40px 40px;
+    max-width: 100%;
+    height: auto;
+    width: 60%;
+}
+
+/* What We Do Section */
+.what-we-do-section {
+    background: #444;
+    color: white;
+    padding: 50px 40px;
+    text-align: left;
+    /* Align text to left */
+}
+
+.what-we-do-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.services-table th,
+.services-table td {
+    border: 1px solid white;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.services-table th {
+    background: #555;
+}
+
+.services-table tbody tr:nth-child(even) {
+    background: #666;
+}
+
+.services-table tbody tr:nth-child(odd) {
+    background: #777;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 765px) {
+    .nav-list {
+        display: flex;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .about-section,
+    .what-we-do-section {
+        padding: 60px 80px;
+        text-align: center;
+        /* Center text for larger screens */
+    }
+
+    .about-section h2,
+    .what-we-do-section h2 {
+        font-size: 32px;
+    }
+
+    .about-section p,
+    .services-table th,
+    .services-table td {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .scrolled {
+        height: 80px;
+        background: rgb(173, 173, 173);
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-top: 20px;
+        color: black;
+    }
+
+    .title {
+        font-size: 30px;
+        text-align: left;
+        /* Align text to left for smaller screens */
+    }
+
+    .about-section,
+    .what-we-do-section {
+        padding: 40px 20px;
+        text-align: left;
+        /* Align text to left for smaller screens */
+    }
+
+    .about-section h2,
+    .what-we-do-section h2 {
+        font-size: 24px;
+    }
+
+    .about-section p,
+    .services-table th,
+    .services-table td {
+        font-size: 16px;
+    }
+
+    .image1 img {
+        padding: 20px 20px;
+        max-width: 100%;
+        height: auto;
+        width: 95%;
+    }
+
+    /* Hide content section and show background image on small devices */
+    .content {
+        display: none;
+    }
+
+    .content-background {
+        display: block;
+        background: url('photos/stock_photo6.jpg') no-repeat center center/cover;
+        min-height: 800px;
+        position: relative;
+        top: -90px;
+        z-index: 1;
+        width: 100%;
+    }
+}
