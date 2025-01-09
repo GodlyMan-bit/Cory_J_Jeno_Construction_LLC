@@ -18,7 +18,7 @@
                     <ul class="nav-list">
                         <li class="nav-link" id="about"><a href="#about-section">About</a></li>
                         <li class="nav-link" id="whatWeDo"><a href="#what-we-do-section">What We Do</a></li>
-                        <li class="nav-link" id="contact"><a href="#">Contact</a></li>
+                        <li class="nav-link" id="contact"><a href="#contact">Contact</a></li>
                         <li class="nav-link" id="faq"><a href="#">FAQ</a></li>
                     </ul>
                 </nav>
@@ -30,8 +30,12 @@
         <div class="content-background"></div> <!-- Content background for small devices -->
         <div class="about-section" id="about-section">
             <h2>About Us</h2>
-            <p>Welcome to Cory J. Jeno Construction LLC! We are dedicated to providing high-quality construction services with a focus on customer satisfaction. Our team of skilled professionals is committed to delivering top-notch craftsmanship and innovative solutions for all your construction needs.</p>
-            <p>With years of experience in the industry, we pride ourselves on our attention to detail, reliability, and integrity. Whether you're planning a new build, renovation, or any other construction project, we are here to help bring your vision to life.</p>
+            <p>Welcome to Cory J. Jeno Construction LLC! We are dedicated to providing high-quality construction
+                services with a focus on customer satisfaction. Our team of skilled professionals is committed to
+                delivering top-notch craftsmanship and innovative solutions for all your construction needs.</p>
+            <p>With years of experience in the industry, we pride ourselves on our attention to detail, reliability, and
+                integrity. Whether you're planning a new build, renovation, or any other construction project, we are
+                here to help bring your vision to life.</p>
         </div>
         <div class="image1"><img src="photos/stock_photo3.jpg" alt=""></div>
         <div class="what-we-do-section" id="what-we-do-section">
@@ -58,6 +62,21 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>Call or email us today for your quote!</p>
+            <p>Phone: (507) 330 1323</p>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="896a75b1-5717-41a8-b8ff-3af763c8d79c">
+                <div class="form-group"> <label for="name">Name</label> <input type="text" id="name" name="name"
+                        required> </div>
+                <div class="form-group"> <label for="email">Email</label> <input type="email" id="email" name="email"
+                        required> </div>
+                <div class="form-group"> <label for="message">Your Message</label> <textarea id="message" name="message"
+                        required></textarea> </div>
+                <div class="form-group"> <button type="submit">Send Message</button> </div>
+            </form>
         </div>
     </div>
     <script src="script.js"></script>

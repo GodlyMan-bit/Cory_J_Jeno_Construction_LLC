@@ -72,7 +72,8 @@
 
 .nav-link a:hover,
 .nav-link a.active {
-    border-bottom: 2px solid white; /* Change underline color on hover and active state */
+    border-bottom: 2px solid white;
+    /* Change underline color on hover and active state */
     transition: 0.3s;
 }
 
@@ -172,6 +173,65 @@
 
 .services-table tbody tr:nth-child(odd) {
     background: #777;
+}
+
+/*Contact form*/
+.contact {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
 }
 
 /* Responsive Styles */

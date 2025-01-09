@@ -1,6 +1,7 @@
 const header = document.querySelector('.header');
 const aboutLink = document.getElementById("about");
 const whatWeDoLink = document.getElementById("whatWeDo");
+const contactLink = document.getElementById("contact")
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= 700) {
@@ -19,5 +20,10 @@ window.addEventListener("scroll", () => {
         whatWeDoLink.classList.add("active");
     } else {
         whatWeDoLink.classList.remove("active");
+    }
+    if (window.scrollY >= 2000) {
+        contactLink.classList.add("active");
+    } else {
+        contactLink.classList.remove("active");
     }
 });
