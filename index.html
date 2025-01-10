@@ -25,7 +25,7 @@
             </div>
         </header>
         <div class="content">
-            <h1 class="title">Cory J. Jeno Construction LLC</h1>
+            <h1 class="title">Cory J. Jeno Construction LLC <strong>(All Content Is Subject To Change</strong>)</h1>
         </div>
         <div class="content-background"></div> <!-- Content background for small devices -->
         <div class="about-section" id="about-section">
@@ -37,7 +37,7 @@
                 integrity. Whether you're planning a new build, renovation, or any other construction project, we are
                 here to help bring your vision to life.</p>
         </div>
-        <div class="image1"><img src="photos/stock_photo3.jpg" alt=""></div>
+        <div class="image1"><img src="photos/house_1.jpg" alt="House in the snow."></div>
         <div class="what-we-do-section" id="what-we-do-section">
             <h2>What We Do</h2>
             <table class="services-table">
@@ -63,6 +63,7 @@
                 </tbody>
             </table>
         </div>
+        <div class="image1"><img src="photos/pole_shed1.jpg" alt="Shed"></div>
         <div class="contact" id="contact">
             <h2>Contact Us</h2>
             <p>Call or email us today for your quote!</p>
@@ -78,8 +79,43 @@
                 <div class="form-group"> <button type="submit">Send Message</button> </div>
             </form>
         </div>
+        <div class="faq" id="faq">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <button class="faq-accordion">What is your service area?</button>
+            <div class="faq-panel">
+                <p>We work in the area surronding Faribault.</p>
+            </div>
+            <button class="faq-accordion">What do you speciallize in?</button>
+            <div class="faq-panel">
+                <p>We speciallize in new home builds, decks, bathroom and kitchen remodeling, concrete pouring, and roof repair.</p>
+            </div>
+            <button class="faq-accordion">Is scheduling a quote free?</button>
+            <div class="faq-panel">
+                <p>Yes, to schedule a quote call: (507) 330 1323 or contact us via the contact form.</p>
+            </div>
+            <button class="faq-accordion">Are you licenced and insured?</button>
+            <div class="faq-panel">
+                <p>Yes, here at Cory J. Jeno Construction LLC we are licenced and insured.</p>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        var acc = document.getElementsByClassName("faq-accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("faq-active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

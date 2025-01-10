@@ -17,6 +17,10 @@
     min-height: 100vh;
 }
 
+.page a {
+    color: #999;
+}
+
 /* Header Styles */
 .header {
     color: white;
@@ -234,6 +238,56 @@
     background-color: #555;
 }
 
+/*FAQ Section*/
+.faq {
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
+}
+
+.faq h2 {
+    color: white;
+}
+
+.faq-accordion {
+    background-color: #444;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.faq-active,
+.accordion:hover {
+    background-color: #444;
+}
+
+.accordion:after {
+    content: '\02795';
+    color: #444;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.faq-active:after {
+    content: "\2212";
+}
+
+.faq-panel {
+    padding: 0 18px;
+    color: white;
+    background-color: #444;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 /* Responsive Styles */
 @media screen and (min-width: 765px) {
     .nav-list {
@@ -321,10 +375,19 @@
     }
 
     .image1 img {
-        padding: 20px 20px;
-        max-width: 100%;
-        height: auto;
-        width: 95%;
+        padding: 0%;
+        position: relative;
+        width: 100%;
+    }
+
+    .contact {
+        max-width: 500px;
+        margin: 0;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
     }
 
     /* Hide content section and show background image on small devices */
@@ -334,8 +397,8 @@
 
     .content-background {
         display: block;
-        background: url('photos/stock_photo6.jpg') no-repeat center center/cover;
-        min-height: 800px;
+        background: url('photos/deck_1.jpg') no-repeat center center/cover;
+        min-height: 400px;
         position: relative;
         top: -90px;
         z-index: 1;
